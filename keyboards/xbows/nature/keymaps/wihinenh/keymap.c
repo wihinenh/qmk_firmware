@@ -67,14 +67,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 register_code(KC_A);
                 unregister_code(KC_A);
             } else {
-                register_code(KC_LALT);
-                register_code(KC_U);
-                unregister_code(KC_U);
-                unregister_code(KC_LALT);
-                register_code(KC_A);
-                unregister_code(KC_A);
+                SEND_STRING(SS_LALT(SS_TAP(X_U)) SS_TAP(X_A));
             }
-            break;
+            return false;
         case OE:
             if (get_mods() & MOD_MASK_SHIFT) {
                 unregister_code(KC_LSFT);
@@ -86,14 +81,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 register_code(KC_O);
                 unregister_code(KC_O);
             } else {
-                register_code(KC_LALT);
-                register_code(KC_U);
-                unregister_code(KC_U);
-                unregister_code(KC_LALT);
-                register_code(KC_O);
-                unregister_code(KC_O);
+                SEND_STRING(SS_LALT(SS_TAP(X_U))SS_TAP(X_O));
             }
-            break;
+            return false;
         }
     }
     return true;
