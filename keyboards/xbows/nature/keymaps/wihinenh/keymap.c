@@ -47,7 +47,7 @@
         KC_ESC,    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_BSPC, KC_H,    KC_J,    KC_K,    KC_L,    OE,      AE,        KC_ENT,  KC_PGDN,
         KC_LSFT,   KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_ENT,  KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,   KC_UP,
 
-        KC_LCTL,   KC_LGUI, KC_LALT,          LT(1,KC_SPC), MT(MOD_LCTL, KC_ESC), KC_RSFT,      KC_SPC,           KC_RALT, MO(1),   KC_RCTL, KC_LEFT, KC_DOWN, KC_RGHT),
+        KC_LCTL,   KC_LGUI, KC_LALT,          LT(1,KC_SPC), LT(2,KC_ESC), KC_RSFT,      KC_SPC,           KC_RALT, MO(1),   KC_RCTL, KC_LEFT, KC_DOWN, KC_RGHT),
 
     /* Symbol layer */
       [1] = LAYOUT(
@@ -59,7 +59,19 @@
         KC_TRNS,   KC_CIRC, KC_MINS, KC_EQL,  KC_DLR,  KC_TRNS, KC_TRNS, KC_GRV,  KC_COLN, KC_QUOT, KC_DQUO, KC_SCLN, KC_BSLS,   KC_TRNS, KC_END,
         KC_TRNS,   KC_AT,   KC_UNDS, KC_PLUS, KC_TILD, KC_TRNS, KC_TRNS, KC_TRNS, KC_EXLM, KC_LT,   KC_GT,   KC_QUES, KC_MUTE,   KC_VOLU,
 
-        KC_TRNS,   KC_TRNS, KC_TRNS,          KC_TRNS,     KC_TRNS, KC_TRNS,      KC_TRNS,          KC_TRNS, KC_TRNS, KC_MPLY,   KC_MPRV, KC_VOLD, KC_MNXT)
+        KC_TRNS,   KC_TRNS, KC_TRNS,          KC_TRNS,     KC_TRNS, KC_TRNS,      KC_TRNS,          KC_TRNS, KC_TRNS, KC_MPLY,   KC_MPRV, KC_VOLD, KC_MNXT),
+
+    /* Navigation layer */
+      [2] = LAYOUT(
+        KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,   KC_TRNS, KC_TRNS,
+
+        KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,   KC_TRNS, KC_TRNS,
+
+        KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS,
+        KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_TRNS, KC_TRNS,   KC_TRNS, KC_TRNS,
+        KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,   KC_TRNS,
+
+        KC_TRNS,   KC_TRNS, KC_TRNS,          KC_TRNS,     KC_TRNS, KC_TRNS,      KC_TRNS,          KC_TRNS, KC_TRNS, KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS)
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
