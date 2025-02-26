@@ -78,6 +78,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     if (record->event.pressed) {
         switch (keycode) {
         case AE:
+            if (get_mods() & MOD_MASK_CTRL) {
+                // Do nothing with control, prevent sending ctrl-a
+                return false;
+            }
             if (get_mods() & MOD_MASK_SHIFT) {
                 unregister_code(KC_LSFT);
                 register_code(KC_LALT);
@@ -92,6 +96,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             return false;
         case OE:
+            if (get_mods() & MOD_MASK_CTRL) {
+                // Do nothing with control, prevent sending ctrl-o
+                return false;
+            }
             if (get_mods() & MOD_MASK_SHIFT) {
                 unregister_code(KC_LSFT);
                 register_code(KC_LALT);
